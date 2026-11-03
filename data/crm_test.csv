@@ -1,0 +1,21 @@
+id_contact,nom,societe,email,telephone,statut,offre_souscrite
+C001,Henri Weber,Weber Logistics,h.weber@weber-logistics-demo.example,+352 000 000 41,client,TVA
+C002,Lena Fischer,Fischer Design,lena.fischer@fischer-design-demo.example,+352 000 000 34,client,BILAN
+C003,Sophie Marchal,Atelier Marchal,sophie.marchal@marchal-demo.example,+352 000 000 15,client,COMPTA
+C004,Vincent Arnaud,Arnaud Menuiserie,vincent.arnaud@arnaud-menuiserie-demo.example,+352 000 000 02,client,COMPTA
+C005,Delphine Muller,Muller Boutique,delphine.muller@muller-boutique-demo.example,+352 000 000 03,client,PAIE
+C006,Henrik Schulz,Schulz Elektro,henrik.schulz@schulz-elektro-demo.example,+352 000 000 04,client,TVA
+C007,Amélie Carpentier,Carpentier Traiteur,amelie.carpentier@carpentier-traiteur-demo.example,+352 000 000 05,client,COMPTA
+C008,Nicolas Bernard,Bernard Immobilier,nicolas.bernard@bernard-immo-demo.example,+352 000 000 06,client,BILAN
+C009,Julie Perrot,Perrot Conseil,julie.perrot@perrot-conseil-demo.example,+352 000 000 08,prospect,aucune
+C010,Frank Lorenz,Lorenz Software,frank.lorenz@lorenz-software-demo.example,+352 000 000 10,prospect,aucune
+C011,Marion Gaillard,Gaillard Fleurs,marion.gaillard@gaillard-fleurs-demo.example,+352 000 000 11,prospect,aucune
+C012,Peter Novak,Novak Logistics,peter.novak@novak-logistics-demo.example,+352 000 000 13,prospect,aucune
+C013,Céline Barbier,Barbier Coiffure,celine.barbier@barbier-coiffure-demo.example,+352 000 000 14,ancien_client,COMPTA
+C014,Mathieu Renard,Renard Transport,mathieu.renard@renard-transport-demo.example,+352 000 000 16,ancien_client,PAIE
+C015,Anna Schneider,Schneider Architekten,anna.schneider@schneider-architekten-demo.example,+352 000 000 17,client,CONSEIL
+C016,Hugo Marchand,Marchand Informatique,hugo.marchand@marchand-info-demo.example,+352 000 000 18,client,DOMICILIATION
+C017,Elena Rossi,Rossi Ristorante,elena.rossi@rossi-ristorante-demo.example,+352 000 000 20,client,COMPTA
+C018,Jérôme Guérin,Guérin Paysage,jerome.guerin@guerin-paysage-demo.example,+352 000 000 21,prospect,aucune
+C019,Katharina Wolf,Wolf Consulting,katharina.wolf@wolf-consulting-demo.example,+352 000 000 22,client,TVA
+C020,Samuel Lopez,Lopez Digital,samuel.lopez@lopez-digital-demo.example,+352 000 000 24,client,DOMICILIATION

@@ -41,3 +41,4 @@ Je note ici chaque choix technique ou de méthode, avec l'alternative écartée 
 ## À trancher plus tard
 
 - **Version de Python** : le projet utilise la version trouvée sur le PC (3.14). À vérifier au premier `uv add` en v0.1 : si une bibliothèque ne la supporte pas, passer à 3.13 avec `uv python pin 3.13`.
+- pydantic 2.14.2 a bien été installé, reste à vérifier psycopg et pgvector le moment venu.
