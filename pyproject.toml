@@ -1,0 +1,17 @@
+[project]
+name = "inbox-to-crm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Marvin Petris", email = "323107050+marvin-petris@users.noreply.github.com" }
+]
+requires-python = ">=3.14"
+dependencies = []
+
+[project.scripts]
+inbox-to-crm = "inbox_to_crm:main"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
