@@ -1,6 +1,6 @@
 # Lexique du projet Inbox-to-CRM
 
-Mis à jour au fil du projet. État au 3/11/2026, fin de Phase 0.
+Mis à jour au fil du projet. État au 6/11/2026, fin de Phase 0.
 
 ## Outils
 
@@ -26,8 +26,11 @@ Mis à jour au fil du projet. État au 3/11/2026, fin de Phase 0.
 | Image | Modèle figé en lecture seule : un programme et tout ce dont il a besoin. Ne tourne pas. Analogie : une recette, ou une classe en Python. |
 | Conteneur | Instance créée à partir d'une image, en cours d'exécution ou arrêtée. Analogie : le plat cuisiné, ou un objet en Python. Une image peut donner plusieurs conteneurs. |
 | Docker Hub | Dépôt public d'où le démon télécharge les images (ex. `hello-world`). |
-| Volume (à voir en v0.2) | Espace de stockage qui survit au conteneur. Les données Postgres y vivront, car on supprime et recrée les conteneurs sans cesse. |
-| Docker Compose (à voir en v0.2) | Fichier `docker-compose.yml` qui décrit plusieurs conteneurs lancés ensemble. |
+| Volume | Espace de stockage séparé du conteneur. Un volume **anonyme** (nom en hexadécimal) est créé automatiquement par l'image, survit à `docker compose down` et devient orphelin : un nouveau est créé à chaque `up`. Un volume **nommé**, déclaré dans le fichier, est réutilisé : c'est ce qu'on utilisera en v0.2 pour les données Postgres. |
+| Docker Compose | Fichier `docker-compose.yml` qui décrit un ou plusieurs services et leur réseau. `up` les lance, `down` les supprime. Même moteur que `docker run`, mais reproductible et versionnable dans Git. |
+| Tag d'image | La version après les deux-points (`postgres:16`). Sans tag, Docker prend `latest`, qui change avec le temps. |
+| Réseau Compose | Réseau créé automatiquement par projet (`docker-tests_default`), qui permet aux services de se joindre par leur nom. |
+| Service (Compose) | Un bloc du fichier (ex. `db`) qui décrit un conteneur : image, variables, ports. |
 
 ## Autres notions
 
@@ -73,6 +76,32 @@ Mis à jour au fil du projet. État au 3/11/2026, fin de Phase 0.
 | RAG | Le système cherche d'abord les passages utiles dans la base de connaissances, puis rédige la réponse à partir d'eux. Prévu en v0.2. |
 | Chunking | Découpage des documents en morceaux indexables. Ici, un morceau par section `##`. |
 
+## Notions Python
+
+| Terme | Définition |
+| --- | --- |
+| Module | Fichier de code réutilisable. `import csv` le charge entièrement, `from pathlib import Path` n'en prend qu'un élément. |
+| Bibliothèque standard | Modules fournis avec Python (`csv`, `pathlib`, `email`). Ce qui s'installe avec `uv add` vient de l'extérieur. |
+| `with open(...) as f:` | Ouvre un fichier et le ferme automatiquement à la fin du bloc. Toujours préciser `encoding="utf-8"`. |
+| `csv.DictReader` | Lit un CSV et rend chaque ligne sous forme de dictionnaire, avec les noms de colonnes de l'en-tête. |
+| Dictionnaire | Paires clé et valeur : `ligne["nom"]`. |
+| f-string | Texte précédé de `f` où `{variable}` est remplacé par sa valeur. Sans le `f`, les accolades restent du texte, ou créent un ensemble. |
+| Tranche | `texte[:40]` : les 40 premiers caractères. |
+| `Path` (pathlib) | Objet qui représente un chemin. `dossier / "fichier.eml"` assemble des morceaux. `mkdir(parents=True, exist_ok=True)` crée le dossier sans erreur s'il existe. |
+| Classe et objet | Une classe est un modèle, un objet en est un exemplaire. Analogie : l'image Docker et le conteneur. |
+| Valeur « fausse » | Une chaîne vide est fausse dans un `if`. `if not nom:` teste « vide ». `nom == False` est toujours faux pour une chaîne, sans erreur. |
+| Chemin relatif | Calculé depuis le dossier où l'on lance la commande, pas depuis l'endroit du script. |
+
+## Notions e-mail
+
+| Terme | Définition |
+| --- | --- |
+| `MIME-Version`, `Content-Type`, `Content-Transfer-Encoding` | En-têtes qui décrivent comment lire le mail : version de la norme, type et jeu de caractères, encodage du corps. |
+| `7bit` / `8bit` | Texte brut. `7bit` : ASCII seulement. `8bit` : octets UTF-8 tels quels. |
+| `quoted-printable` | N'encode que les caractères spéciaux (`é` devient `=C3=A9`), le reste reste lisible. Coupe les lignes de plus de 76 caractères avec un `=` final. |
+| `base64` | Encode tout le corps en blocs illisibles. |
+| `print(msg)` contre `as_bytes()` | `print` convertit en texte et peut afficher du base64 alors que l'objet est en `8bit`. Le fichier écrit dépend de la méthode d'écriture. On impose donc `cte="quoted-printable"`. |
+
 ## Commandes
 
 | Commande | Où | Ce qu'elle fait |
@@ -104,6 +133,17 @@ Mis à jour au fil du projet. État au 3/11/2026, fin de Phase 0.
 | `git push` | PowerShell | Envoie les commits vers GitHub. |
 | `git pull` | PowerShell | Récupère et fusionne les commits de GitHub. Ne détruit pas le travail local non commité. |
 | `git rev-parse --show-toplevel` | PowerShell | Affiche le dossier racine du dépôt actif. Contrôle de sécurité avant de commiter. |
+| `docker run --name N -e VAR=val -p 5432:5432 -d --rm image` | PowerShell | Lance un conteneur : nom, variable d'environnement, port (PC:conteneur), arrière-plan, suppression à l'arrêt. L'image se met en dernier. |
+| `docker stop N` | PowerShell | Arrête un conteneur. |
+| `docker logs N` | PowerShell | Affiche les messages du conteneur. |
+| `docker compose up -d` | Dossier du fichier | Lance les services du `docker-compose.yml` en arrière-plan. |
+| `docker compose ps` | Dossier du fichier | Liste les conteneurs du projet. |
+| `docker compose down` | Dossier du fichier | Supprime conteneurs et réseau. Les volumes restent. |
+| `docker compose down -v` | Dossier du fichier | Supprime aussi les volumes rattachés aux conteneurs du moment. Les volumes orphelins restent. |
+| `docker volume ls` | PowerShell | Liste les volumes. |
+| `docker volume rm NOM` | PowerShell | Supprime un volume précis, définitivement. Docker refuse si un conteneur l'utilise. |
+| `docker volume prune` | PowerShell | Supprime tous les volumes inutilisés, sans distinction. À éviter quand on a des données. |
+| `uv run python scripts/generer_eml.py` | Racine du dépôt | Lance le script avec l'environnement du projet. |
 
 ## Pièges déjà rencontrés
 
@@ -116,3 +156,12 @@ Mis à jour au fil du projet. État au 3/11/2026, fin de Phase 0.
 - En-têtes `=?utf-8?...` et corps avec `=C3=A9` dans un `.eml` : c'est le format normal, pas une erreur.
 - En Python, ouvrir les fichiers texte avec `encoding="utf-8"`.
 - Commandes à risque, à ne jamais lancer sans comprendre : `git reset --hard`, `git restore`, `git push --force`.
+- Terminal de VS Code : l'extension Python tape elle-même la commande d'activation du `.venv`. Si tu tapes ta commande trop tôt, elle se colle à la sienne (`Jeton inattendu`). Attendre la fin de l'activation, puis relancer.
+- `docker` ne répond pas (`failed to connect to the docker API`) après un redémarrage : lancer Docker Desktop et attendre « Running ».
+- Volumes anonymes orphelins après `down` : à nettoyer avec `docker volume rm`. Volume nommé en v0.2.
+- `docker run` sans image : `requires at least 1 argument`. L'image est en dernier.
+- `if nom == False` ne plante pas et ne fonctionne pas. Utiliser `if not nom:`.
+- Retirer un `f` devant une f-string oblige à retirer aussi les accolades : `{valeur}` seul est un ensemble, pas du texte.
+- Ruff : le linter signale des erreurs, le formateur (Maj + Alt + F) corrige l'espacement. Les deux sont distincts.
+- Lire un `.eml` brut avec un `=` en fin de ligne : c'est la coupure du quoted-printable. Toujours lire les mails avec le module `email`.
+- Pas de vrais noms dans un dépôt public : noms inventés uniquement.
