@@ -42,3 +42,22 @@ Je note ici chaque choix technique ou de méthode, avec l'alternative écartée 
 
 - **Version de Python** : le projet utilise la version trouvée sur le PC (3.14). À vérifier au premier `uv add` en v0.1 : si une bibliothèque ne la supporte pas, passer à 3.13 avec `uv python pin 3.13`.
 - pydantic 2.14.2 a bien été installé, reste à vérifier psycopg et pgvector le moment venu.
+
+## 2026-11-09
+
+### Convention de nommage
+
+- **Choix** : Code en minuscule avec "_" en séparateur au lieu de "-" pour les mots composé (par exemple "hors_sujet" au lieu de "hors-sujet")
+- **Alternative ecartée** : mettre les catégories dans le fichier CSV en majuscule pour une meilleure lisibilité.
+- **Raison** : ça respecte les conventions de nommage des développeurs et ça me permet de ne pas faire d'erreur car je retranspose cette même règles aux fichiers du projet
+
+### Gestion de la langue 
+
+- **Choix** : Retenir uniquement EN, FR et DE, les autres sont prise en compte par le LLM mais les traitera dans "autres"
+- **Raison** : Dans le cas d'un email d'une autre langue que les 3 autorisées, le LLM aurait choisis au hasard entre les 3 propositions, rajouter autre permet d'écartée ce scénario
+
+### Choix des champs à utiliser dans le jeu de verité
+
+- **Choix** : Les champs "piege" et "scenario" du CSV ont été écartés dans le traitement par le code Python
+- **Raison** : Ces champs avaient été créés afin de générer des emails via LLM. Nous n'en avons pas l'utilité.
+

@@ -1,13 +1,15 @@
 [project]
 name = "inbox-to-crm"
 version = "0.1.0"
-description = "Add your description here"
+description = "Transforme les mails entrants d'une PME en leads CRM avec brouillon de réponse, après validation humaine."
 readme = "README.md"
 authors = [
     { name = "Marvin Petris", email = "323107050+marvin-petris@users.noreply.github.com" }
 ]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "pydantic>=2.14.3",
+]
 
 [project.scripts]
 inbox-to-crm = "inbox_to_crm:main"
@@ -15,3 +17,8 @@ inbox-to-crm = "inbox_to_crm:main"
 [build-system]
 requires = ["uv_build>=0.13.7,<0.14.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
