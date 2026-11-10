@@ -52,3 +52,12 @@ class Fiche(BaseModel):
         ]
         | None
     ) = None
+
+
+class Mail(BaseModel):
+    """Informations expediteur extrait d'un mail entrant ainsi que le contenu du mail (sujet et corps)."""
+
+    nom_expediteur: str | None = None
+    adresse_expediteur: str
+    sujet: str | None = None
+    contenu: str | None = None

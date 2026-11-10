@@ -159,6 +159,7 @@ ENV/
 env.bak/
 venv.bak/
 data/mails_generes/
+scratch/
 
 # Spyder project settings
 .spyderproject
