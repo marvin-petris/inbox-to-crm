@@ -2,6 +2,7 @@ import pytest
 from pydantic import ValidationError
 
 from inbox_to_crm.models import Fiche
+from inbox_to_crm.models import Extraction
 
 
 def test_fiche_valide():
@@ -30,3 +31,7 @@ def test_fiche_categorie_inconnue_refusee():
             besoin_resume="Demande de prix pour la comptabilité mensuelle d'une boulangerie",
             offre_concernee="compta",
         )
+
+
+def test_extraction_ne_demande_pas_email_au_llm():
+    assert "email" not in Extraction.model_fields

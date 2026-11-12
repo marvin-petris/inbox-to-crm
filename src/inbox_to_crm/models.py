@@ -5,8 +5,8 @@ from typing import Literal
 from pydantic import BaseModel
 
 
-class Fiche(BaseModel):
-    """Informations extraites d'un mail entrant, validées avant tout usage."""
+class Extraction(BaseModel):
+    """Ce que le LLM extrait d'un mail : tout, sauf ce que le code connaît déjà."""
 
     categorie: Literal[
         "devis",
@@ -31,9 +31,6 @@ class Fiche(BaseModel):
     societe: str | None = None
     telephone: str | None = None
 
-    # Toujours présent : c'est l'adresse de l'expéditeur, dans l'en-tête.
-    email: str
-
     # Toujours rédigeable, même pour un spam : c'est ce que lit
     # la personne qui valide sur Telegram.
     besoin_resume: str
@@ -52,6 +49,14 @@ class Fiche(BaseModel):
         ]
         | None
     ) = None
+
+
+class Fiche(Extraction):
+    """Fiche complète : l'extraction du LLM, plus l'adresse de l'expéditeur lue dans l'en-tête."""
+
+    # Toujours présent : c'est l'adresse de l'expéditeur, dans l'en-tête.
+    # cette valeur fait foi pour l'envoi de la réponse.
+    email: str
 
 
 class Mail(BaseModel):
