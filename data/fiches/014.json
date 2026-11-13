@@ -1,0 +1,11 @@
+{
+  "categorie": "devis",
+  "urgence": "haute",
+  "langue": "en",
+  "nom": "Sarah Collins",
+  "societe": "Collins Retail",
+  "telephone": "+352 000 000 09",
+  "besoin_resume": "Demande de devis pour le dépôt des comptes annuels avant vendredi ; la cliente indique que les documents sont prêts et souhaite confirmer rapidement.",
+  "offre_concernee": "bilan",
+  "email": "sarah.collins@collins-retail-demo.example"
+}

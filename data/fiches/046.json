@@ -1,0 +1,11 @@
+{
+  "categorie": "devis",
+  "urgence": "normale",
+  "langue": "fr",
+  "nom": "Yann Lecomte",
+  "societe": "Lecomte Plomberie",
+  "telephone": "+352 000 000 33",
+  "besoin_resume": "Demande de prix et de devis pour la gestion de la paie de deux salariés.",
+  "offre_concernee": "paie",
+  "email": "yann.lecomte@lecomte-plomberie-demo.example"
+}

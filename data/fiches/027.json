@@ -1,0 +1,11 @@
+{
+  "categorie": "reclamation",
+  "urgence": "haute",
+  "langue": "fr",
+  "nom": "Pascal Lemoine",
+  "societe": "Lemoine Boutique",
+  "telephone": "+352 000 000 51",
+  "besoin_resume": "Le client se plaint que les bulletins de paie de ses salariés contiennent des erreurs pour la troisième fois ce trimestre et menace de consulter son avocat si la situation n'est pas corrigée immédiatement.",
+  "offre_concernee": "paie",
+  "email": "pascal.lemoine@lemoine-boutique-demo.example"
+}

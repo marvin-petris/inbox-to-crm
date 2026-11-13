@@ -1,0 +1,11 @@
+{
+  "categorie": "devis",
+  "urgence": "normale",
+  "langue": "fr",
+  "nom": "Claire Dumont",
+  "societe": "Boulangerie Dumont",
+  "telephone": null,
+  "besoin_resume": "Demande de devis pour la tenue de la comptabilité mensuelle d'une boulangerie, avec détail des tarifs et des prestations incluses.",
+  "offre_concernee": "compta",
+  "email": "claire.dumont@dumont-demo.example"
+}

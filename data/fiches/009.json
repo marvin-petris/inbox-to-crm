@@ -1,0 +1,11 @@
+{
+  "categorie": "prospection",
+  "urgence": "basse",
+  "langue": "fr",
+  "nom": "Laurent Girard",
+  "societe": "Bureautech Services",
+  "telephone": "+352 000 000 77",
+  "besoin_resume": "Bureautech Services propose la location de photocopieurs multifonctions avec entretien inclus, à partir de 49 euros par mois, et demande un court échange pour présenter son offre.",
+  "offre_concernee": null,
+  "email": "l.girard@bureautech-demo.example"
+}

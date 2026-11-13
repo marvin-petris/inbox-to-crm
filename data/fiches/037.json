@@ -1,0 +1,11 @@
+{
+  "categorie": "rendez_vous",
+  "urgence": "normale",
+  "langue": "en",
+  "nom": "Lucas Meyer",
+  "societe": "Meyer Robotics",
+  "telephone": null,
+  "besoin_resume": "Demande d'un appel cette semaine (mercredi après-midi ou vendredi matin) pour faire le point sur leur déclaration de TVA.",
+  "offre_concernee": "tva",
+  "email": "lucas.meyer@meyer-robotics-demo.example"
+}

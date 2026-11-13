@@ -1,0 +1,11 @@
+{
+  "categorie": "devis",
+  "urgence": "normale",
+  "langue": "en",
+  "nom": "Priya Nair",
+  "societe": "Nair Analytics",
+  "telephone": "+352 000 000 12",
+  "besoin_resume": "Demande de devis pour la création d'une SARL (rédaction des statuts et dépôt au registre) pour un cabinet de conseil en analytique, par une personne qui s'installe au Luxembourg le trimestre prochain. Elle se dit prête à fournir les informations sur les associés.",
+  "offre_concernee": "creation",
+  "email": "priya.nair@nair-analytics-demo.example"
+}

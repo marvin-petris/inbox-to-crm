@@ -1,0 +1,11 @@
+{
+  "categorie": "devis",
+  "urgence": "normale",
+  "langue": "de",
+  "nom": "Katrin Hoffmann",
+  "societe": "Hoffmann Immobilien",
+  "telephone": "+352 000 000 72",
+  "besoin_resume": "Une agence immobilière demande un devis pour une comptabilité mensuelle.",
+  "offre_concernee": "compta",
+  "email": "katrin.hoffmann@hoffmann-immo-demo.example"
+}

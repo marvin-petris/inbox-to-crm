@@ -1,0 +1,11 @@
+{
+  "categorie": "spam",
+  "urgence": "basse",
+  "langue": "fr",
+  "nom": null,
+  "societe": null,
+  "telephone": null,
+  "besoin_resume": "Message de masse promettant un rendement garanti sur un investissement de 200 EUR ; aucune demande liée aux services du cabinet.",
+  "offre_concernee": null,
+  "email": "promo@gains-rapides-demo.example"
+}

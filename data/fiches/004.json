@@ -1,0 +1,11 @@
+{
+  "categorie": "reclamation",
+  "urgence": "haute",
+  "langue": "fr",
+  "nom": "Henri Weber",
+  "societe": "Weber Logistics",
+  "telephone": "+352 000 000 41",
+  "besoin_resume": "Le client se plaint d'une déclaration de TVA déposée en retard ayant entraîné une pénalité, signale des retards répétés et menace de changer de cabinet sans réponse sous 48 heures ; il demande à être rappelé rapidement.",
+  "offre_concernee": "tva",
+  "email": "h.weber@weber-logistics-demo.example"
+}

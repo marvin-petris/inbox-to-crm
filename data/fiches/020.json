@@ -1,0 +1,11 @@
+{
+  "categorie": "reclamation",
+  "urgence": "normale",
+  "langue": "fr",
+  "nom": "Bruno Faure",
+  "societe": "Faure Électricité",
+  "telephone": "+352 000 000 82",
+  "besoin_resume": "Le client attend depuis deux semaines la restitution de ses documents comptables, a déjà relancé par téléphone sans résultat, et demande où en est le traitement.",
+  "offre_concernee": "compta",
+  "email": "bruno.faure@faure-demo.example"
+}

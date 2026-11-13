@@ -1,0 +1,11 @@
+{
+  "categorie": "spam",
+  "urgence": "basse",
+  "langue": "en",
+  "nom": null,
+  "societe": null,
+  "telephone": null,
+  "besoin_resume": "Message de loterie frauduleux annonçant un gain de 850 000 EUR et demandant nom et coordonnées bancaires; à ignorer.",
+  "offre_concernee": null,
+  "email": "winner-notice@prize-center-demo.example"
+}

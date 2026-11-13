@@ -1,0 +1,11 @@
+{
+  "categorie": "question",
+  "urgence": "basse",
+  "langue": "fr",
+  "nom": "Nathalie Roux",
+  "societe": null,
+  "telephone": null,
+  "besoin_resume": "Demande d'information sur la procédure d'arrivée d'un nouveau client (première étape, délais et documents nécessaires). Création d'entreprise en cours, pas d'urgence.",
+  "offre_concernee": null,
+  "email": "nathalie.roux@roux-demo.example"
+}

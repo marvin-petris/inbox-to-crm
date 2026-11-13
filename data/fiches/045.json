@@ -1,0 +1,11 @@
+{
+  "categorie": "prospection",
+  "urgence": "basse",
+  "langue": "de",
+  "nom": "Dieter Braun",
+  "societe": "Braun Druck",
+  "telephone": "+352 000 000 61",
+  "besoin_resume": "Une imprimerie (Braun Druck) propose ses services d'impression de papier à en-tête et de cartes de visite de haute qualité et offre l'envoi d'un échantillon. Il s'agit d'une prospection commerciale sans lien avec les offres du cabinet.",
+  "offre_concernee": null,
+  "email": "dieter.braun@braun-druck-demo.example"
+}

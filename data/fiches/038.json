@@ -1,0 +1,11 @@
+{
+  "categorie": "question",
+  "urgence": "normale",
+  "langue": "de",
+  "nom": "Sabine Keller",
+  "societe": null,
+  "telephone": null,
+  "besoin_resume": "La personne demande si le cabinet travaille en allemand et quelles langues sont parlées au bureau.",
+  "offre_concernee": null,
+  "email": "sabine.keller@keller-demo.example"
+}

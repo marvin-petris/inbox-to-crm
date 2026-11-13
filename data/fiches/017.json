@@ -1,0 +1,11 @@
+{
+  "categorie": "hors_sujet",
+  "urgence": "basse",
+  "langue": "fr",
+  "nom": "Gérard Blanc",
+  "societe": null,
+  "telephone": null,
+  "besoin_resume": "Demande d'intervention d'urgence pour une fuite d'eau sous un évier, hors des services du cabinet.",
+  "offre_concernee": null,
+  "email": "gerard.blanc@blanc-demo.example"
+}

@@ -1,0 +1,11 @@
+{
+  "categorie": "rendez_vous",
+  "urgence": "normale",
+  "langue": "de",
+  "nom": "Lena Fischer",
+  "societe": "Fischer Design",
+  "telephone": "+352 000 000 34",
+  "besoin_resume": "Demande de rendez-vous pour une question fiscale concernant son entreprise, avec disponibilité souhaitée dans les deux prochaines semaines.",
+  "offre_concernee": "conseil",
+  "email": "lena.fischer@fischer-design-demo.example"
+}

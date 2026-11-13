@@ -1,0 +1,11 @@
+{
+  "categorie": "devis",
+  "urgence": "normale",
+  "langue": "en",
+  "nom": "Alex Morgan",
+  "societe": "Morgan Ventures",
+  "telephone": null,
+  "besoin_resume": "Demande d'information sur la grille tarifaire du cabinet (prix approximatif).",
+  "offre_concernee": "compta",
+  "email": "alex.morgan@morgan-ventures-demo.example"
+}

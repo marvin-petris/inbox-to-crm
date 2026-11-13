@@ -1,0 +1,11 @@
+{
+  "categorie": "spam",
+  "urgence": "basse",
+  "langue": "en",
+  "nom": null,
+  "societe": null,
+  "telephone": null,
+  "besoin_resume": "Message frauduleux de type hameçonnage prétendant que la boîte mail est pleine et invitant à se connecter via un lien externe.",
+  "offre_concernee": null,
+  "email": "security-team@mailbox-alert-demo.example"
+}
