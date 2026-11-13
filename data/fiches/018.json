@@ -1,11 +1,11 @@
 {
   "categorie": "question",
-  "urgence": "normale",
+  "urgence": "basse",
   "langue": "fr",
   "nom": "Thierry Colin",
   "societe": "Colin Menuiserie",
   "telephone": null,
-  "besoin_resume": "Le client, menuisier à la tête d'une petite entreprise, demande si la déclaration de TVA doit être faite chaque mois ou chaque trimestre.",
+  "besoin_resume": "Savoir si la déclaration de TVA de sa petite entreprise de menuiserie se fait chaque mois ou chaque trimestre.",
   "offre_concernee": "tva",
   "email": "thierry.colin@colin-menuiserie-demo.example"
 }

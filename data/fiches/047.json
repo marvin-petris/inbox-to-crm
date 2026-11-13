@@ -5,7 +5,7 @@
   "nom": null,
   "societe": null,
   "telephone": null,
-  "besoin_resume": "Message de loterie frauduleux annonçant un gain de 850 000 EUR et demandant nom et coordonnées bancaires; à ignorer.",
+  "besoin_resume": "Message de loterie frauduleux annonçant un faux gain de 850 000 EUR et demandant nom et coordonnées bancaires sous 48 heures.",
   "offre_concernee": null,
   "email": "winner-notice@prize-center-demo.example"
 }

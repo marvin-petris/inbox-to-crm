@@ -5,7 +5,7 @@
   "nom": null,
   "societe": null,
   "telephone": null,
-  "besoin_resume": "Message frauduleux de type hameçonnage prétendant que la boîte mail est pleine et invitant à se connecter via un lien externe.",
+  "besoin_resume": "Message de phishing se faisant passer pour une alerte de quota de boîte mail, invitant à se connecter via un lien externe suspect.",
   "offre_concernee": null,
   "email": "security-team@mailbox-alert-demo.example"
 }

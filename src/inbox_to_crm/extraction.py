@@ -46,10 +46,10 @@ Règles :
 """
 
 
-def extract(mail: Mail) -> Fiche:
-    """Envoie un mail au LLM pour en extraire les informations pertinentes, selon la consigne ci-dessus."""
+def extract(mail: Mail) -> tuple[Fiche, int, int]:
+    """Envoie un mail au LLM pour en extraire les informations pertinentes ainsi que l'usage de tokens, selon la consigne ci-dessus."""
     client = Anthropic(max_retries=2, timeout=30)
-    texte = f"Objet : {mail.sujet or 'Sans tire'}  \n\n{mail.contenu or 'Sans contenu'}"
+    texte = f"Objet : {mail.sujet or 'Sans objet'}\n\n{mail.contenu or 'Sans contenu'}"
     reponse = client.messages.parse(
         model="claude-haiku-5-5",
         max_tokens=1024,
@@ -62,4 +62,6 @@ def extract(mail: Mail) -> Fiche:
         **extraction.model_dump(),
         email=mail.adresse_expediteur,
     )
-    return fiche
+    tokens_entree = reponse.usage.input_tokens
+    tokens_sortie = reponse.usage.output_tokens
+    return fiche, tokens_entree, tokens_sortie

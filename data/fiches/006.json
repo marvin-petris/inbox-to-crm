@@ -5,7 +5,7 @@
   "nom": "Marc Lefèvre",
   "societe": null,
   "telephone": null,
-  "besoin_resume": "Demande de report du rendez-vous prévu jeudi à la semaine suivante, un jour quelconque sauf le mardi, en raison d'un empêchement.",
+  "besoin_resume": "Demande de report du rendez-vous prévu jeudi à la semaine suivante, tout jour sauf le mardi, en raison d'un empêchement.",
   "offre_concernee": null,
   "email": "marc.lefevre@lefevre-demo.example"
 }

@@ -5,7 +5,7 @@
   "nom": "Emma Wilson",
   "societe": "Wilson Studio",
   "telephone": "+352 000 000 47",
-  "besoin_resume": "La personne demande si le cabinet peut gérer les déclarations de TVA d'une société immatriculée au Royaume-Uni mais exploitée depuis le Luxembourg. Elle souhaite avoir une réponse avant de contacter d'autres prestataires.",
+  "besoin_resume": "Une dirigeante dont la société est immatriculée au Royaume-Uni mais qui opère depuis le Luxembourg demande si le cabinet peut gérer les déclarations de TVA de cette société.",
   "offre_concernee": "tva",
   "email": "emma.wilson@wilson-studio-demo.example"
 }

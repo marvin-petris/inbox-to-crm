@@ -5,7 +5,7 @@
   "nom": "Daniel Hughes",
   "societe": "Hughes & Co",
   "telephone": "+352 000 000 58",
-  "besoin_resume": "Le client s'étonne que la facture de comptabilité mensuelle soit supérieure au devis accepté en septembre. Il demande une explication de l'écart et, si c'est une erreur, une correction.",
+  "besoin_resume": "Le client constate que la facture de comptabilité mensuelle est supérieure au devis accepté en septembre. Il demande une explication de l'écart et, si c'est une erreur, une correction.",
   "offre_concernee": "compta",
   "email": "daniel.hughes@hughes-co-demo.example"
 }

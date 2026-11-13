@@ -5,7 +5,7 @@
   "nom": "Tom Reeves",
   "societe": null,
   "telephone": null,
-  "besoin_resume": "Demande les horaires d'ouverture du cabinet et la manière de réserver un premier appel. Indépendant, sans urgence.",
+  "besoin_resume": "Demande les horaires d'ouverture du cabinet et la procédure pour réserver un premier appel. Indépendant, rien d'urgent.",
   "offre_concernee": null,
   "email": "tom.reeves@reeves-demo.example"
 }

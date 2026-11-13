@@ -121,3 +121,22 @@ Je note ici chaque choix technique ou de méthode, avec l'alternative écartée 
 ## À trancher plus tard
 
 - **Version de Python** : le projet utilise la version trouvée sur le PC (3.14). `pydantic` et `anthropic` s'installent sans problème. Reste à vérifier `psycopg` et `pgvector` en v0.2. En cas de blocage, passer à 3.13 avec `uv python pin 3.13`.
+
+## 2026-11-13
+
+### Une fiche par mail, commitée
+
+- **Choix** : chaque fiche est enregistrée dans `data/fiches/<id>.json`, et les fiches du passage de référence sont commitées.
+- **Alternative écartée** : un seul fichier pour les 50 fiches, ou des fiches exclues de Git.
+- **Raison** : si le script plante au 30e mail, les 29 premières fiches sont sauvées. Le LLM ne répond jamais deux fois à l'identique : garder les fiches qui ont produit le score le rend vérifiable, et `git diff` montre ce qui change entre deux passages.
+
+### Gestion des erreurs d'API
+
+- **Choix** : `max_retries=2` et `timeout=30` secondes, soit 90 secondes au pire par mail. Le script n'attrape que `anthropic.APIError`, note les mails en échec et continue.
+- **Alternative écartée** : les valeurs par défaut (10 minutes de délai, soit 30 minutes au pire par mail), et un `except` qui attraperait toutes les erreurs.
+- **Raison** : un `except` trop large cacherait les vrais bugs du code. Testé en forçant `timeout=0.001` : les échecs sont rattrapés et le script va jusqu'au bout.
+
+### Mesure du coût
+
+- **Choix** : `extract` renvoie la fiche et les tokens consommés. Les tarifs de Haiku 5.5 sont des constantes, avec le lien de la page officielle.
+- **Premier résultat** : 0,000345 $ par mail en moyenne, 0,017 $ pour les 50 mails. L'entrée représente environ 63 % du coût, à cause de la consigne renvoyée à chaque appel.
