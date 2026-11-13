@@ -48,7 +48,7 @@ Règles :
 
 def extract(mail: Mail) -> Fiche:
     """Envoie un mail au LLM pour en extraire les informations pertinentes, selon la consigne ci-dessus."""
-    client = Anthropic()
+    client = Anthropic(max_retries=2, timeout=30)
     texte = f"Objet : {mail.sujet or 'Sans tire'}  \n\n{mail.contenu or 'Sans contenu'}"
     reponse = client.messages.parse(
         model="claude-haiku-5-5",
